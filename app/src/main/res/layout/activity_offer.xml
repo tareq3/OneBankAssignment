@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFEF"
+        android:orientation="vertical"
+        tools:context=".OfferActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#fff"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_toolbar_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <!-- <ImageView
+                 android:id="@+id/rl_qrCode"
+                 android:background="@drawable/border"
+                 android:onClick="qrCodebutton"
+                 android:layout_width="wrap_content" android:src="@drawable/my_qr"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="5dp"
+                 android:visibility="visible" />
+                 <ImageView
+                 android:id="@+id/re_logout"
+                 android:background="@drawable/border"
+                 android:onClick="btnLogout"
+                 android:layout_width="wrap_content"
+                     android:src="@drawable/ic_logout"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="5dp"
+                 android:visibility="visible" />-->
+
+
+                <!--<TextView
+                    android:id="@+id/tv_counter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/cart_counter"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />-->
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <!--
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/abelregular"
+                android:textColor="@color/white" />-->
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <Button
+                    android:id="@+id/btn_topup"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/button_new"
+
+                    android:gravity="center"
+
+                    android:text="@string/recharge_button"
+                    app:layout_constraintEnd_toEndOf="@+id/et_pin"
+                    app:layout_constraintStart_toStartOf="@+id/et_pin"
+                    app:layout_constraintTop_toBottomOf="@+id/et_pin" />
+
+                <EditText
+                    android:id="@+id/et_pin"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/et_background"
+                    android:drawablePadding="@dimen/text_size_10"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="PIN"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:paddingStart="10dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/et_amount"
+                    app:layout_constraintStart_toStartOf="@+id/et_amount"
+                    app:layout_constraintTop_toBottomOf="@+id/et_amount" />
+
+                <EditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/et_background"
+                    android:ems="10"
+
+                    android:gravity="center"
+                    android:hint="Enter Amount"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/view4"
+                    app:layout_constraintStart_toStartOf="@+id/view4"
+                    app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/et_background"
+                    android:ems="10"
+
+                    android:gravity="center"
+                    android:hint="Mobile Number"
+                    android:inputType="textPersonName|phone"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/cb_self_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:text="Self"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_mobile"
+                    app:layout_constraintEnd_toEndOf="@+id/et_mobile"
+                    app:layout_constraintTop_toTopOf="@+id/et_mobile" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/et_background"
+                    app:layout_constraintEnd_toEndOf="@+id/et_mobile"
+                    app:layout_constraintStart_toStartOf="@+id/et_mobile"
+                    app:layout_constraintTop_toBottomOf="@+id/et_mobile">
+
+
+                </View>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/view_operator"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/view2"
+                    app:layout_constraintEnd_toEndOf="@+id/view2"
+                    app:layout_constraintStart_toStartOf="@+id/view2"
+                    app:layout_constraintTop_toTopOf="@+id/view2">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                  <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view4"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/et_background"
+                    app:layout_constraintEnd_toEndOf="@+id/view2"
+                    app:layout_constraintStart_toStartOf="@+id/view2"
+                    app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RadioButton
+                            android:id="@+id/PrepaidradioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+
+                            android:text="Prepaid"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/PostpaidradioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="false"
+
+                            android:text="Postpaid"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_amount"
+                    app:layout_constraintStart_toStartOf="@+id/et_amount"
+                    app:layout_constraintTop_toTopOf="@+id/et_amount"
+                     />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_pin"
+                    app:layout_constraintStart_toStartOf="@+id/et_pin"
+                    app:layout_constraintTop_toTopOf="@+id/et_pin"
+                     />
+
+                <ImageView
+                    android:id="@+id/iv_contacts"
+                    android:layout_width="25dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/et_mobile"
+                    app:layout_constraintStart_toStartOf="@+id/et_mobile"
+                    app:layout_constraintTop_toTopOf="@+id/et_mobile"
+                    app:srcCompat="@drawable/ic_baseline_perm_contact_calendar_24" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_topup" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recharge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+                <TextView
+                    android:id="@+id/tv_recharge_offer_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Offer"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="#FF9800"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_amount"
+                    app:layout_constraintEnd_toEndOf="@+id/et_amount"
+                    app:layout_constraintTop_toTopOf="@+id/et_amount" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+    </LinearLayout>

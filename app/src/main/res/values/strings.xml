@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">OneBankAssignment</string>
+    <string name="recharge_button">RECHARGE</string>
+    <string name="hello_blank_fragment">blank</string>
+    <string name="ok_account_number">Account Number</string>
+    <string name="login_ok_wallet_pin">PIN</string>
+    <string name="login">Login</string>
+
+    <string name="biometric_title">Start Using Bio-Auth - Save your time</string>
+    <string name="biometric_subtitle">Login to your OK Wallet account</string>
+    <string name="biometric_description">Authenticate to verify your identity</string>
+    <string name="biometric_negative_button_text">CANCEL</string>
+</resources>
